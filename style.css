@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: sans-serif;
+}
+
+/*STEP:-2  ab main container ko edit karunga */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#ebf4f5, #b5c6e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Step:-3 ab maine mere [form-box] ko style kiya. */
+.form-box {
+    /* center me jane ke liye 50% diya width ko */
+    width: 50%;
+    /* max-width isliye liya kyuki mujhe form ko settle karna tha  */
+    max-width: 400px;
+    /* only form ka color white hoga  */
+    background-color: white;
+    border-radius: 8px;
+    /* padding liya 20px from top&bottom OR 28px from left&right */
+    padding: 20px 28px;
+    /* margin-inline ka use karke ak he line me sab margin de sakte hain  */
+    margin-inline: 20px;
+}
+
+/* STEP:-4 Ab humne [.form-box header h1] ko edit kiya  */
+
+.form-box header h1 {
+    text-align: center;
+    color: #5851e3;
+}
+
+/* STEP:-5 Ab form box ke under ke form ko style karenge  */
+
+.form-box form {
+    /* top our bottom dono ke liye margin use karne ka shortcut method */
+    margin-block: 30px;
+}
+
+/* Step:-6 ab hamare 3 input ko style denge  */
+
+input {
+    width: 100%;
+    /* padding diya top&bottom se 18px our left&right se 16px */
+    padding: 18px 16px;
+    /* 3 ka border hata diya  */
+    border: none;
+    /* 3 me se kisi per bhi click karne per jo border hota hai vo hatane ke liye outline property ka use kiya */
+    outline: none;
+    /* 3 ke peeche ka background color idya  */
+    background-color: #a3a3a331;
+    font-size: 16px;
+    /* Margin dene par 3 ak dusre se thoda alag ho jayenge jo chipke the ak-dusre se  */
+    margin: 12px 0;
+}
+
+/* Step:-7 ab hum [anchor] tag ko styling karenge  */
+
+a {
+    /* neeche ka underline hatane ke liye  */
+    text-decoration: none;
+    color: #767676;
+    font-size: 14px;
+}
+
+/* Step:-8 ab maine mere [login] vale button ko style diya  */
+
+input[type="button"]{
+     /* top our bottom dono ke liye margin use karne ka shortcut method [margin-block] */
+    margin-block: 24px;
+    background-color: #5851e3;
+    color: wheat;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+    /* curser login button pe leke jane par vo slowly update hoga jitna second humne set kiya  */
+    transition: .4s;
+}
+
+input[type="text"]{
+    display: none;
+}
+
+/* Step:-9 ab main mere [login] button ko hover karunga jisse uspe koi click karega to active ho jayega  */
+
+
+input[type="button"]:hover{
+    background-color: darkblue;
+}
+
+/* Step:-10 ab humne jo logo lagaya hai [fb,google,twitter] usko style dunga */
+
+.links{
+    display: flex;
+    justify-content: center;
+}
+
+/* Step:-11 ab mai [links ke under anchor ke under jo img hai] usko edit karunga */
+
+.links a img{
+    max-height: 40px;
+    /* 3 logo ke beech me diffrence chahhiye isliye humne [margin inline] set kiya means [left&right] ke liye   */
+    margin-inline: 5px;
+
+}
+
+/* Step:-12 ab jo hamara sabse last vala hai option[signup] ka usko edit karenge  */
+
+.Signup{
+    text-align: center;
+    /* [top & bottom] se margin denge to uske liye hum [margin block] ka use karenge */
+    margin-block: 20px;
+}
+
+/* Step:13 ab hum [Signup] ke under ke [anchor] tag ko style denge  */
+
+.Signup a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #5851e3;
+}
+
+/* STEP:-14 jab koi bhi uspe click karenga to uska color change hoga. uske liye [hover] karna padega  */
+
+.Signup a:hover{
+    color: #10449a;
+   /* text ke neeche humne [underline] choose kiya. baad me us underline ka size[2px] diya to jitna denge utna mota dikhega  */
+    text-decoration: underline 2px;
+    /* jo hamara [signup] likha vaha se underline ki line tak ka distance ke liye [text-underline-offset:] ka use karenge */
+    text-underline-offset: 3.5px;
+}
+
+/* css to achieve  responsivness */
+
+@media  screen and (max-width:700px) {
+        .form-box{
+            width: 100%;
+        }
+}
